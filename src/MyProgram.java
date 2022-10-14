@@ -45,6 +45,16 @@ public class MyProgram {
 
     }
 
+    public static void OutputMass_p(int[][] a) {
+        for (int j = 0; j < a.length; j++) {
+            for (int i = 0; i < a[j].length && i < a.length; i++) {
+                System.out.print(a[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+    }
+
     public static int[] MinMax(int[] a) {
         int max = 0;
         int min = 0;
@@ -169,16 +179,20 @@ public class MyProgram {
             System.out.println("======"+i+"======\n");
         }*/
 
-        int [][] dm = new int [n][];
+        int [][] dm = new int [n][n];
 
-        for (int i = 0; i < point3d.length; i++) {
+       /* for (int i = 0; i < point3d.length; i++) {
             int temp = 1 + (int)(Math.random() * 10);
 
             dm[i] = new int[temp];
 
 
-            }
+            }*/
 
+
+        InputMass(dm);
+        OutputMass(dm);
+        OutputMass_p(dm);
 
         }
 
